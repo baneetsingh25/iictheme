@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { PublicLayout } from "./ui/layouts/PublicLayout";
 import { AdminLayout } from "./ui/layouts/AdminLayout";
-import { HomePage } from "./pages/HomePage";
+import { HomePageComposed } from "./pages/HomePageComposed";
 import { AboutPage } from "./pages/AboutPage";
 import { InnovationHubPage } from "./pages/InnovationHubPage";
 import { EventsPage } from "./pages/EventsPage";
@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
     path: "/",
     element: <PublicLayout />,
     children: [
-      { index: true, element: <HomePage /> },
+      { index: true, element: <HomePageComposed /> },
       { path: "about", element: <AboutPage /> },
       { path: "innovation-hub", element: <InnovationHubPage /> },
       { path: "events", element: <EventsPage /> },
