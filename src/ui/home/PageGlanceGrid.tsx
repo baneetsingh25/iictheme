@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import { Link } from "react-router-dom";
 
 type PageLinkCard = {
   href: string;
@@ -219,10 +220,10 @@ export function PageGlanceGrid() {
 
         if (page.label === "About Us") {
           return (
-            <a
+            <Link
               key={page.href}
               className={`group relative overflow-hidden rounded-[1.8rem] border p-8 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-xl ${baseClass} ${page.layout}`}
-              href={page.href}
+              to={page.href}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_26%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_22%)]" />
               <div className="flex h-full flex-col justify-between lg:flex-row lg:items-stretch lg:gap-6">
@@ -282,16 +283,16 @@ export function PageGlanceGrid() {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           );
         }
 
         if (page.label === "Gallery") {
           return (
-            <a
+            <Link
               key={page.href}
               className={`group relative overflow-hidden rounded-[1.8rem] border p-0 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-xl ${baseClass} ${page.layout}`}
-              href={page.href}
+              to={page.href}
             >
               <img alt={page.label} className="absolute inset-0 h-full w-full object-cover" src={page.image} />
               <div className="absolute inset-0 bg-gradient-to-r from-slate-950/82 via-society-blue/72 to-slate-950/88" />
@@ -311,16 +312,16 @@ export function PageGlanceGrid() {
                   Explore visuals <span aria-hidden="true">→</span>
                 </p>
               </div>
-            </a>
+            </Link>
           );
         }
 
         if (page.label === "Achievements") {
           return (
-            <a
+            <Link
               key={page.href}
               className={`group rounded-[1.8rem] border p-8 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-xl ${baseClass} ${page.layout}`}
-              href={page.href}
+              to={page.href}
             >
               <div className="flex h-full flex-col justify-between">
                 <div>
@@ -342,16 +343,16 @@ export function PageGlanceGrid() {
                 </div>
                 <p className="mt-8 text-sm font-semibold text-society-red">View Hall of Fame</p>
               </div>
-            </a>
+            </Link>
           );
         }
 
         if (page.label === "Innovation Hub") {
           return (
-            <a
+            <Link
               key={page.href}
               className={`group rounded-[1.6rem] border border-slate-100 bg-white p-8 shadow-[0_18px_45px_rgba(15,23,42,0.06)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.1)] ${page.layout}`}
-              href={page.href}
+              to={page.href}
             >
               <div className="flex h-full flex-col">
                 <div>
@@ -366,15 +367,15 @@ export function PageGlanceGrid() {
                   </p>
                 </div>
               </div>
-            </a>
+            </Link>
           );
         }
 
         return (
-          <a
+          <Link
             key={page.href}
             className={`group rounded-[1.6rem] border border-slate-100 bg-white p-8 shadow-[0_18px_45px_rgba(15,23,42,0.06)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.1)] ${page.layout}`}
-            href={page.href}
+            to={page.href}
           >
             <div className="flex h-full flex-col">
               <div>
@@ -389,7 +390,7 @@ export function PageGlanceGrid() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
         );
       })}
     </div>

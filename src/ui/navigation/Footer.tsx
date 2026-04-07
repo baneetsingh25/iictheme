@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { env } from "../../config/env";
 
 export function Footer() {
@@ -29,11 +30,11 @@ export function Footer() {
             Quick Links
           </h4>
           <div className="mt-6 space-y-4 text-lg text-slate-600">
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/">Home</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/about">About Us</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/events">Events</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/reports">Reports</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/gallery">Gallery</a>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/">Home</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/about">About Us</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/events">Events</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/reports">Reports</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/gallery">Gallery</Link>
           </div>
         </div>
 
@@ -42,10 +43,10 @@ export function Footer() {
             Resources
           </h4>
           <div className="mt-6 space-y-4 text-lg text-slate-600">
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/reports">Annual Reports</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/reports">MoM Documents</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/about">Guidelines</a>
-            <a className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" href="/contact">FAQs</a>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/reports">Annual Reports</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/reports">MoM Documents</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/about">Guidelines</Link>
+            <Link className="block transition duration-200 hover:translate-x-1 hover:text-society-blue" to="/contact">FAQs</Link>
           </div>
         </div>
 

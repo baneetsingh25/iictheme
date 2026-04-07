@@ -1,4 +1,5 @@
 import type { EventCard } from "../../types/content";
+import { Link } from "react-router-dom";
 
 type UpcomingEventsPreviewProps = {
   events: EventCard[];
@@ -20,12 +21,12 @@ export function UpcomingEventsPreview({ events }: UpcomingEventsPreviewProps) {
             <h3 className="text-xl font-semibold text-slate-900">{event.title}</h3>
             <p className="text-sm text-slate-600">{event.date}</p>
             <p className="text-sm text-slate-600">{event.venue}</p>
-            <a
+            <Link
               className="inline-flex rounded-full bg-society-blue px-4 py-2 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-brand-700"
-              href="/events"
+              to="/events"
             >
               Go to Events Page
-            </a>
+            </Link>
           </div>
         </article>
       ))}
