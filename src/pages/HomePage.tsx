@@ -265,33 +265,63 @@ export function HomePage() {
               return (
                 <a
                   key={page.href}
-                  className={`group rounded-[1.8rem] border p-8 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-xl ${baseClass} ${page.layout}`}
+                  className={`group relative overflow-hidden rounded-[1.8rem] border p-8 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-xl ${baseClass} ${page.layout}`}
                   href={page.href}
                 >
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_26%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.08),transparent_22%)]" />
                   <div className="flex h-full flex-col justify-between lg:flex-row lg:items-stretch lg:gap-6">
-                    <div className="flex max-w-sm flex-col">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/12 text-white">
+                    <div className="relative z-10 flex max-w-sm flex-col">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/10">
                         <CardIcon className="h-4 w-4" label={page.label} />
                       </div>
-                      <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                      <p className="mt-7 text-xs font-semibold uppercase tracking-[0.22em] text-white/68">
                         About Us
                       </p>
-                      <h3 className="mt-4 text-[1.65rem] font-semibold leading-9 text-white">
+                      <h3 className="mt-5 text-[1.8rem] font-semibold leading-10 text-white">
                         About Us
                       </h3>
-                      <p className="mt-5 max-w-[24rem] text-sm leading-7 text-white/82">
+                      <p className="mt-5 max-w-[24rem] text-[15px] leading-8 text-white/82">
                         {page.description}
                       </p>
-                      <div className="mt-7 flex flex-wrap gap-2">
+                      <div className="mt-8 flex flex-wrap gap-2.5">
                         {page.highlights.map((item) => (
-                          <span key={item} className="rounded-full bg-white/12 px-3 py-1 text-[11px] font-medium text-white">
+                          <span key={item} className="rounded-full bg-white/10 px-3.5 py-1.5 text-[11px] font-medium text-white/92 ring-1 ring-white/10">
                             {item}
                           </span>
                         ))}
                       </div>
-                      <p className="mt-8 text-sm font-semibold text-white">Explore About</p>
+                      <p className="mt-8 text-sm font-semibold text-white/92">
+                        Explore About <span aria-hidden="true">→</span>
+                      </p>
                     </div>
-                    <div className="mt-6 hidden flex-1 rounded-[1.4rem] bg-gradient-to-br from-white/20 via-white/8 to-transparent lg:block" />
+                    <div className="relative z-10 mt-6 hidden w-[14.5rem] shrink-0 rounded-[1.55rem] bg-gradient-to-b from-white/14 via-white/10 to-white/6 p-4 ring-1 ring-white/12 lg:block">
+                      <div className="grid h-full gap-3">
+                        <div className="rounded-[1.15rem] border border-society-blue/55 bg-society-blue/14 px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-society-yellow">
+                            Mission
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-white/88">
+                            Build a campus culture of innovation.
+                          </p>
+                        </div>
+                        <div className="rounded-[1.15rem] border border-society-yellow/45 bg-society-yellow/10 px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-society-yellow">
+                            Vision
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-white/88">
+                            Turn ideas into real student-led outcomes.
+                          </p>
+                        </div>
+                        <div className="rounded-[1.15rem] border border-society-red/45 bg-society-red/10 px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-society-yellow">
+                            Leadership
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-white/88">
+                            Guided by faculty mentors and the council team.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </a>
               );
